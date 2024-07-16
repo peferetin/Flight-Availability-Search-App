@@ -1,12 +1,16 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import Home from './Home.jsx'
 import './index.css'
-import FlightSearch from './components/FlightSearch.jsx'
+import { BrowserRouter } from 'react-router-dom'
+import Routing from './Routing.jsx'
+import { FlightProvider } from './Context/FlightContext.jsx'
+
+
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    {/* <FlightSearch /> */}
-    <Home />
-  </React.StrictMode>,
+  <BrowserRouter>
+    <FlightProvider>
+      <Routing />
+    </FlightProvider>
+  </BrowserRouter>
 )
