@@ -9,6 +9,7 @@ function FlightDetails() {
 
     const { id } = useParams();
     const [error, setError] = useState('');
+    const { flights } = useFlightContext();
     const [flightDetails, setFlightDetails] = useState(null);
 
     const fetchFlightDetails = async () => {
